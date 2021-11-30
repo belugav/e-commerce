@@ -2,6 +2,7 @@ import React from "react";
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import './NavBar.css'
+import CartWidget from "../CartWidget/CartWidget";
 
 //import logo from './assets/logo.png'
 
@@ -19,6 +20,7 @@ export default function  NavBar (){
             <li><Button variant="contained">Clientes</Button></li>
             <li><Button variant="contained">Contacto</Button></li>
         </ul>
+        <CartWidget/>
 </nav>
 </AppBar>
 
