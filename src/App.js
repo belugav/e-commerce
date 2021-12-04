@@ -1,16 +1,25 @@
 
+import React from "react";
+import Container from '@mui/material/Container';
 import './App.css';
 import NavBar from './components/NavBar/NavBar.js';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.js';
 import Footer from './components/Footer/Footer.js';
-//import ListItems from './components/ListItems/ListItems';
+
 function App() {
 
   return (
-    <div className="App">
-     <NavBar/>
+<div className="App">
+
+
+<NavBar/>
   
-    <Footer/>
-    </div>
+ 
+<ItemListContainer />
+
+ 
+  <Footer />
+      </div>
   );
 }
 

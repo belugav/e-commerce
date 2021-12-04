@@ -1,6 +1,5 @@
 
 import React from "react";
-import AppBar from '@mui/material/AppBar';
 
 import './Footer.css';
 
@@ -8,12 +7,12 @@ import './Footer.css';
 
 export default function  Footer (){
     return(
-        <AppBar>
-  <div>
+       
+  <footer>
 <p>Footer</p>
 
-  </div>
-</AppBar> 
+  </footer>
+
     )
 
 }

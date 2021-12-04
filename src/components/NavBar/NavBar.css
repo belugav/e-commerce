@@ -4,8 +4,9 @@ nav{
     align-items: center;
     padding: 10px 26px;
     background-color: rgb(231, 116, 74);
-
+    height: auto;
 }
+
 nav ul{
     list-style: none;
     display: flex;

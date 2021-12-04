@@ -8,7 +8,7 @@ import CartWidget from "../CartWidget/CartWidget";
 
 export default function  NavBar (){
     return(
-        <AppBar>
+        
         <nav>
             <div className="contenedor-logo">
 
@@ -22,7 +22,7 @@ export default function  NavBar (){
         </ul>
         <CartWidget/>
 </nav>
-</AppBar>
+
 
 
     )
