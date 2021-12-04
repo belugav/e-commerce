@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar.js';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.js';
 import Footer from './components/Footer/Footer.js';
+import ItemCount from "./components/ItemCount/ItemCount";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
   
  
 <ItemListContainer />
+<ItemCount/>
 
  
   <Footer />
