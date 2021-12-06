@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './ItemList.css'
-
+import ItemCount  from '../ItemCount/ItemCount';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const ItemList = () => {
@@ -67,7 +67,7 @@ const ItemList = () => {
                             {products.map(product => {
                                 return (
                                     <div  key={product.id}>
-                                        <Item data={product} />
+                                        <ItemCount data={product} />
                                     </div>
                                 )
                             })}

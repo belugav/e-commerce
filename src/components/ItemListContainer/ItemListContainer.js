@@ -1,6 +1,6 @@
 import React from "react";
 import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount.js'
+import ItemList from '../ItemList/ItemList.js'
 
 const ItemListContainer= () => {
 
@@ -9,7 +9,7 @@ const ItemListContainer= () => {
         <div>
             
             <p>Bienvenidos a Traveller</p>
-            <ItemCount/>
+            <ItemList/>
 
           
              </div>

@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './ItemCount.css'
+//import '../ItemList/ItemList.js'
 
-
-export default function ItemCount(data) {
+export default function ItemCount({data}) {
 
     const [itemCount, setItemCout] = useState(0)
 
@@ -14,20 +14,19 @@ export default function ItemCount(data) {
         itemCount > 0 && setItemCout(itemCount - 1)
     }
 
-    console.log ("hola", data)
+    //console.log ("hola", data)
 
     return (
         <div className="card-item-product">
 
-
-<span>Cantidad: </span>
                        
                        <div className="item-counter">
+                           <spam>{data.name}</spam>
                            <button  onClick={removeItem}>-</button>
                            <p>{itemCount}</p>
                            <button  onClick={updateItem} >+</button>
                        </div>
-                   
+                   <span>Stock: {data.stock}</span>
                    <button>Agregar al carrito</button>
 
            
