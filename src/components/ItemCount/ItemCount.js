@@ -22,6 +22,8 @@ export default function ItemCount({data}) {
                        
                        <div className="item-counter">
                            <spam>{data.name}</spam>
+                           <img src={`../../assets/${data.img}`} alt="imagen"/>
+
                            <button  onClick={removeItem}>-</button>
                            <p>{itemCount}</p>
                            <button  onClick={updateItem} >+</button>

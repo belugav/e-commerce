@@ -6,6 +6,9 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer.
 import Footer from './components/Footer/Footer.js';
 import ItemList from "./components/ItemList/ItemList";
 import ItemCount from "./components/ItemCount/ItemCount";
+import ContainerItemDetail from './components/ContainerItemDetail/ContainerItemDetail.js';
+
+
 function App() {
 
   return (
@@ -14,9 +17,8 @@ function App() {
 
 <NavBar/>
   
- 
+<ContainerItemDetail/>
 <ItemListContainer />
-
 
   <Footer />
       </div>

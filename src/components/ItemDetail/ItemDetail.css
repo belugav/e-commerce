@@ -1,0 +1,22 @@
+.imgItemDetail{
+
+    width: 200px;
+    height: auto;
+}
+
+.detailParent{
+display: flex;
+justify-content: center;
+}
+.detailData{
+    margin-left:50px;
+}
+.tituloProducto{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: darkblue;
+
+}
+.detalleProducto{
+    color: rgb(18, 18, 165)
+}
