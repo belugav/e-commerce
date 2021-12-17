@@ -3,7 +3,7 @@ import './ItemDetail.css'
 
 export default function ItemDetail({data}){
 
-console.log("esta es la data", data.name)
+console.log("esta es la data", data)
 
 return (
     

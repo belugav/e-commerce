@@ -18,7 +18,7 @@ export default function  NavBar (){
         </div>
         <ul>
             <li> <Link to = "/"> <Button variant="contained">Inicio</Button></Link></li>
-            <li><Link to = "/"><Button variant="contained">Prductos</Button></Link></li>
+            <li><Link to = "/travel"><Button variant="contained">Viajes</Button></Link></li>
             <li><Link to = "/customer"><Button variant="contained">Clientes</Button></Link></li>
             <li><Link to = "/contact"><Button variant="contained">Contacto</Button></Link></li>
         </ul>

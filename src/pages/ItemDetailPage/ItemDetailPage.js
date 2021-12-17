@@ -1,6 +1,7 @@
+import ContainerItemDetail from "../../components/ContainerItemDetail/ContainerItemDetail"
 export default function ItemDetailPage() {
     return(
-       <h1>Nuestros viajes</h1>
+       <ContainerItemDetail/>
     )
 
 

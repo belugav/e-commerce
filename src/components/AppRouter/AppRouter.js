@@ -8,6 +8,7 @@ import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import ItemDetailPage from '../../pages/ItemDetailPage/ItemDetailPage';
 
 
+
 export default function AppRouter() {
     
     return (
@@ -15,7 +16,8 @@ export default function AppRouter() {
             <NavBar/>
                 <Routes>
                 
-                <Route path='/item/:id' element={<ItemDetailPage/>}/>
+                <Route path='/travel/:id' element={<ItemDetailPage/>}/>
+                <Route path='/travel' element={<HomePage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
                 <Route path='/customer' element={<CustomerPage/>}/>
                 <Route path='/' element={ <HomePage/>}/>
