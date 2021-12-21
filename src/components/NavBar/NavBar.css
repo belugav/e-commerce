@@ -2,7 +2,7 @@ nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 26px;
+    padding: 10px 10px;
     background-color: rgb(231, 116, 74);
     height: auto;
 }
@@ -10,7 +10,9 @@ nav{
 nav ul{
     list-style: none;
     display: flex;
+    
 }
 nav ul li{
     margin-left: 40px;
+  
 }

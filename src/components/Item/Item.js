@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import './Item.css'
 
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
-
 
 
 export default function Item({ data }) {
@@ -12,9 +10,8 @@ export default function Item({ data }) {
         <div className="card-item-product">
             
                 
-                    
-                   
                     <Link to={`/travel/${data.id}`} style={{textDecoration: 'none'}}>
+        
                     <div className="item-info">
                         <h2>{data.name}</h2>
                         <div className="item-image">
@@ -28,7 +25,7 @@ export default function Item({ data }) {
                             
                         </div>
                        
-                        <Button variant="contained" color="background">Agregar al carrito</Button>
+                        <button variant="contained" color="background">Agregar al carrito</button>
                     </div>
             </Link>     
         </div>

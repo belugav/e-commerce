@@ -6,7 +6,8 @@ import ContactPage from '../../pages/ContactPage/ContactPage';
 import CustomerPage from '../../pages/CustomerPage/CustomerPage';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import ItemDetailPage from '../../pages/ItemDetailPage/ItemDetailPage';
-
+import CategoriesPage from '../../pages/CategoriesPage/CategoriesPage.js';
+import CategoriesList from '../CategoriesList/CategoriesList.js';
 
 
 export default function AppRouter() {
@@ -15,9 +16,11 @@ export default function AppRouter() {
         <BrowserRouter>
             <NavBar/>
                 <Routes>
-                
+                <Route path='/category/:category' element={<CategoriesList/>}/>
+
                 <Route path='/travel/:id' element={<ItemDetailPage/>}/>
                 <Route path='/travel' element={<HomePage/>}/>
+                <Route path='/category' element={<CategoriesPage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
                 <Route path='/customer' element={<CustomerPage/>}/>
                 <Route path='/' element={ <HomePage/>}/>

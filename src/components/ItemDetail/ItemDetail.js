@@ -1,6 +1,6 @@
 import react from 'react'
 import './ItemDetail.css'
-
+import ItemCount from '../ItemCount/ItemCount.js'
 export default function ItemDetail({data}){
 
 console.log("esta es la data", data)
@@ -17,6 +17,8 @@ return (
                <h1 className="tituloProducto"> {data.name}</h1>
                 <h2 className="detalleProducto">Precio:{data.price}</h2>
                 <h2 className="detalleProducto">Stock:{data.stock}</h2>
+                <ItemCount data={data}/>
+
               
              </div>
 
