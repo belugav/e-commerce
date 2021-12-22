@@ -17,10 +17,14 @@ export default function  NavBar (){
         <img src={process.env.PUBLIC_URL + "./assets/logo.png"} alt="logo"/>
         </div>
         <ul>
-            <li> <Link to = "/"> <Button variant="contained">Inicio</Button></Link></li>
-            <li><Link to = "/category"><Button variant="contained">Viajes</Button></Link></li>
-            <li><Link to = "/customer"><Button variant="contained">Clientes</Button></Link></li>
-            <li><Link to = "/contact"><Button variant="contained">Contacto</Button></Link></li>
+            <li> <Link to = "/" style={{textDecoration:'none' }}
+> <Button variant="contained">Inicio</Button></Link></li>
+            <li><Link to = "/category" style={{textDecoration:'none' }}
+><Button variant="contained">Viajes</Button></Link></li>
+            <li><Link to = "/customer" style={{textDecoration:'none' }}
+><Button variant="contained">Clientes</Button></Link></li>
+            <li><Link to = "/contact" style={{textDecoration:'none' }}
+><Button variant="contained">Contacto</Button></Link></li>
         </ul>
         <CartWidget/>
 </nav>

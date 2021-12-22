@@ -8,7 +8,7 @@ import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import ItemDetailPage from '../../pages/ItemDetailPage/ItemDetailPage';
 import CategoriesPage from '../../pages/CategoriesPage/CategoriesPage.js';
 import CategoriesList from '../CategoriesList/CategoriesList.js';
-
+import CartPage from '../../pages/CartPage/CartPage.js';
 
 export default function AppRouter() {
     
@@ -20,6 +20,7 @@ export default function AppRouter() {
 
                 <Route path='/travel/:id' element={<ItemDetailPage/>}/>
                 <Route path='/travel' element={<HomePage/>}/>
+                <Route path='/cart' element={<CartPage/>}/>
                 <Route path='/category' element={<CategoriesPage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
                 <Route path='/customer' element={<CustomerPage/>}/>

@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import './Item.css'
 
 import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
 
 
 export default function Item({ data }) {
    
+  
+
     return (
         <div className="card-item-product">
             
@@ -21,6 +24,7 @@ export default function Item({ data }) {
                         <div className="item-count">
                             <div className="item-count__info">
                                 <span>Cantidad: </span>
+                                <ItemCount stock={data.stock}/>
                             </div>
                             
                         </div>
