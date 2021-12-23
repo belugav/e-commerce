@@ -9,8 +9,12 @@ import { useParams } from "react-router-dom";
 
 const CategoriesList =() => {
 
+  
+
+
+
+
 const {category} = useParams();
-console.log("cat",{category})
 
 const [loader,setLoader]=useState(true);
 const [products,setProducts]=useState([]);
@@ -146,19 +150,24 @@ const dataProducts = [
 
 ]
 
-
     const getProducts= new Promise((resolve,reject) =>{
         setTimeout(() => {
             resolve(dataProducts)
         },2000)
     })
 
-
     useEffect(()=>{
         getProducts.then((resultsProducts) =>{
              resultsProducts.filter(resultProduct => {
                 if(resultProduct.category === parseInt(category)){
-                    products.push(resultProduct);
+                
+                    const list = []
+
+                   list.push(resultProduct)
+
+                    setProducts(list)
+
+
                    setLoader(false)
                  
                 }
