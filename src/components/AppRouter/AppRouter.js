@@ -16,12 +16,12 @@ export default function AppRouter() {
         <BrowserRouter>
             <NavBar/>
                 <Routes>
-                <Route path='/category/:category' element={<CategoriesList/>}/>
+                <Route path='/category/:category' element={<CategoriesPage/>}/>
 
                 <Route path='/travel/:id' element={<ItemDetailPage/>}/>
                 <Route path='/travel' element={<HomePage/>}/>
                 <Route path='/cart' element={<CartPage/>}/>
-                <Route path='/category' element={<CategoriesPage/>}/>
+                <Route path='/category' element={<CategoriesList/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
                 <Route path='/customer' element={<CustomerPage/>}/>
                 <Route path='/' element={ <HomePage/>}/>

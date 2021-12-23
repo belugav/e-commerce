@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import './ItemList.css'
 import CircularProgress from '@mui/material/CircularProgress';
-import { Container } from '@mui/material';
 import Item from '../Item/Item';
+import { useParams } from 'react-router-dom'
 
-const ItemList = () => {
+
+const ItemList = ({title}) => {
     const [loader, setLoader] = useState(true)
     const [products, setProducts] = useState([])
+
+    const {category} =useParams()
+    console.log("categoria: ", category)
+    
+    
     const dataProducts = [
         {
             id: 1,
@@ -15,7 +21,7 @@ const ItemList = () => {
             stock: 10000,
             img: 'miami.jpg',
             description: "Viaje a Miami",
-            category:1,
+            category:"Usa",
         },
         {
             id: 2,
@@ -24,7 +30,7 @@ const ItemList = () => {
             stock: 5000,
             img: 'nuevayork.jpg',
             description: "Viaje a New York",
-            category:1,
+            category:"Usa",
             
         },
         {
@@ -34,7 +40,7 @@ const ItemList = () => {
             stock: 10000,
             img: 'orlando.jpg',
             description: "Viaje a Orlando",
-            category:1,
+            category:"Usa",
             
         },
         {
@@ -44,7 +50,7 @@ const ItemList = () => {
             stock: 25,
             img: 'losangeles.jpg',
             description: "Viaje a Los Ángeles",
-            category:1,
+            category:"Usa",
             
         },
         {
@@ -54,7 +60,7 @@ const ItemList = () => {
             stock: 25,
             img: 'madrid.jpg',
             description: "Viaje a Madrid",
-            category:2,
+            category:"España",
             
         },
     
@@ -65,7 +71,7 @@ const ItemList = () => {
             stock: 25,
             img:'sevilla.jpg',
             description: "Viaje a Barcelona",
-            category:2,
+            category:"España",
             
         },
     
@@ -76,7 +82,7 @@ const ItemList = () => {
             stock: 25,
             img: 'sevilla.jpg',
             description: "Viaje a Sevilla",
-            category:2,
+            category:"España",
             
         },
     
@@ -88,7 +94,7 @@ const ItemList = () => {
             stock: 25,
             img: 'toledo.jpg',
             description: "Viaje a Toledo",
-            category:2,
+            category:"España",
             
         },
     
@@ -99,7 +105,7 @@ const ItemList = () => {
             stock: 25,
             img: 'roma.jpg',
             description: "Viaje a Roma",
-            category:3,
+            category:"Italia",
             
         },
     
@@ -110,7 +116,7 @@ const ItemList = () => {
             stock: 25,
             img: 'venecia.jpg',
             description: "Viaje a Venecia",
-            category:3,
+            category:"Italia",
             
         },
     
@@ -121,7 +127,7 @@ const ItemList = () => {
             stock: 25,
             img: 'pisa.jpg',
             description: "Viaje a Pisa",
-            category:3,
+            category:"Italia",
             
         },
     
@@ -132,10 +138,51 @@ const ItemList = () => {
             stock: 25,
             img: 'napoles.jpg',
             description: "Viaje Nápoles",
-            category:3,
+            category:"Italia",
+            
+        },
+        {
+            id: 13,
+            name: 'París',
+            price: 1200,
+            stock: 25,
+            img: 'paris.jpg',
+            description: "Viaje a París",
+            category:"Francia",
+            
+        },
+       
+        {
+            id: 14,
+            name: 'Augnon',
+            price: 1200,
+            stock: 25,
+            img: 'augnon.jpg',
+            description: "Viaje a Augnon",
+            category:"Francia",
+            
+        },
+        {
+            id: 15,
+            name: 'Nantes',
+            price: 1200,
+            stock: 25,
+            img: 'nantes.jpg',
+            description: "Viaje a Nantes",
+            category:"Francia",
+            
+        },
+
+        {
+            id: 16,
+            name: 'Lyon',
+            price: 1200,
+            stock: 25,
+            img: 'lyon.jpg',
+            description: "Viaje a Lyon",
+            category:"Francia",
             
         }
-    
     ]
     
 
@@ -145,19 +192,28 @@ const ItemList = () => {
         }, 2000)
     })
 
-    useEffect(() => {
-        getProducts.then((data) => {
-            console.log("respuesta de promesa:", data)
-            setProducts(data)
-            //Ocultar loader
-            setLoader(false)
+    useEffect(()=>{
+        getProducts.then((resultsProducts) =>{
+        if (category) {
+            resultsProducts.filter(resultProduct => {
+                if(resultProduct.category === category){
+                    setProducts(products => [...products, resultProduct])
+                    setLoader(false)
+            }
         })
-    }, [])
+         }else{
+            setProducts(resultsProducts)
+            setLoader(false)
+         }
+         })
+    },[])
+
 
     return (
         //Update
         <>
-            <h2>Productos Destacados</h2>
+            <h2>{category ? category: title}</h2>
+
             <div className="product-container">
                 {
                     loader
