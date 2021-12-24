@@ -154,11 +154,11 @@ const ItemList = ({title}) => {
        
         {
             id: 14,
-            name: 'Augnon',
+            name: 'Avignon',
             price: 1200,
             stock: 25,
-            img: 'augnon.jpg',
-            description: "Viaje a Augnon",
+            img: 'avignon.jpg',
+            description: "Viaje a Avignon",
             category:"Francia",
             
         },
@@ -181,6 +181,26 @@ const ItemList = ({title}) => {
             img: 'lyon.jpg',
             description: "Viaje a Lyon",
             category:"Francia",
+            
+        },
+        {
+            id: 17,
+            name: 'Sydney',
+            price: 1200,
+            stock: 25,
+            img: 'sydney.jpg',
+            description: "Viaje a Sydney",
+            category:"Australia",
+            
+        },
+        {
+            id: 18,
+            name: 'Shangai',
+            price: 1200,
+            stock: 25,
+            img: 'shangai.jpg',
+            description: "Viaje a Shangai",
+            category:"China",
             
         }
     ]
