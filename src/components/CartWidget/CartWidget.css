@@ -1,10 +1,10 @@
 .box-cart {
     position: absolute;
     z-index: 1;
-    width: 400px;
+    width: 500px;
     height: auto;
     background: white;
-    right: 20px;
+    right: 2px;
     top: 75px;
     padding: 10px 0px;
     box-sizing: border-box;
@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 10px;
+    
     border-bottom: 1px solid #d6d6d6;
 }
 
@@ -31,6 +32,10 @@
 .item-cart-img {
     width: 80px;
     padding: 5px 0px;
+}
+
+.cartMinImage{
+    width:100px;
 }
 
 .item-cart-img img {

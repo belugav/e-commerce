@@ -8,7 +8,7 @@ const ItemListContainer= () => {
 
         <div>
             
-            <h1>Bienvenidos a Traveller</h1>
+            <h1>A donde viajamos hoy?</h1>
             <ItemList/>
 
           

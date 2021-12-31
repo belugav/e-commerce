@@ -240,7 +240,7 @@ const ItemList = ({title}) => {
                         ?
                         <CircularProgress />
                         :
-                        <div>
+                        <div className='product-collection'>
                             {products.map(product => {
                                 return (
                                     <div  key={product.id}>

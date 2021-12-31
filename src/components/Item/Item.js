@@ -20,7 +20,7 @@ export default function Item({ data }) {
                         <div className="item-image">
                         <img className='imgViajes' src={`../../assets/${data.img}`} alt="product image" />
                     </div>
-                    <span className="stock-text">Stock : {data.stock}</span>
+                    {/* <span className="stock-text">Stock : {data.stock}</span>
                         <div className="item-count">
                             <div className="item-count__info">
                                 <span>Cantidad: </span>
@@ -29,7 +29,7 @@ export default function Item({ data }) {
                             
                         </div>
                        
-                        <button variant="contained" color="background">Agregar al carrito</button>
+                        <button variant="contained" color="background">Agregar al carrito</button> */}
                     </div>
             </Link>     
         </div>

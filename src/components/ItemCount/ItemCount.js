@@ -5,29 +5,16 @@ export default function ItemCount({data, onAdd}) {
 
     const [itemCount, setItemCout] = useState(0)
 
-    const updateItem = () => {
-       // itemCount < data.stock && setItemCout(itemCount + 1)
-      
-       if (itemCount<data.stock){
-
-        setItemCout (itemCount+1)
-        onAdd (itemCount+1)
-
-       }
+    const updateItem=() => {
+        onAdd(itemCount +1)
+       data.stock >0 ? setItemCout(itemCount +1) : data.stock--
+        
+        
     }
 
-    const removeItem = () => {
-       // itemCount > 0 && setItemCout(itemCount - 1)
-        
-
-       if (itemCount>data.stock){
-
-        setItemCout (itemCount-1)
-       onAdd (itemCount-1)
-
-       }
-
-
+    const removeItem=() => {
+       itemCount >0 ? setItemCout(itemCount -1) : data.stock++
+           
     }
 
     return (
@@ -36,12 +23,12 @@ export default function ItemCount({data, onAdd}) {
                        
                        <div className="item-counter">
                           
-                           <button  onClick={removeItem}>-</button>
+                           <button className="cantDeItems" onClick={removeItem}>-</button>
                            <p>{itemCount}</p>
-                           <button  onClick={updateItem} >+</button>
+                           <button className="cantDeItems"  onClick={updateItem} >+</button>
                        </div>
                  
-                   <button>Agregar al carrito</button>
+                   
 
            
   </div>

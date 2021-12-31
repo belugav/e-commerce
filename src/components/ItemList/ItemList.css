@@ -1,5 +1,10 @@
 .imgViajes{
     width: 300px;
     height: auto;
-    border: coral 1px solid;
+   box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.90);
+}
+.product-collection{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
 }
