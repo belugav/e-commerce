@@ -3,18 +3,22 @@ import './ItemCount.css'
 
 export default function ItemCount({data, onAdd}) {
 
-    const [itemCount, setItemCout] = useState(0)
+    const [itemCount, setItemCout] = useState(1)
 
     const updateItem=() => {
-        onAdd(itemCount +1)
-       data.stock >0 ? setItemCout(itemCount +1) : data.stock--
-        
+         onAdd(itemCount-1)
+        if ( data.stock>1) {
+            setItemCout(itemCount +1)
+        data.stock--
+        }
         
     }
 
     const removeItem=() => {
-       itemCount >0 ? setItemCout(itemCount -1) : data.stock++
-           
+        if (itemCount >1) {
+         setItemCout(itemCount -1)
+         data.stock++
+         }
     }
 
     return (
