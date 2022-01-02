@@ -10,30 +10,47 @@ export default function ItemDetail({data}){
 
    const [quantityItem, setquantityItem]=useState (0)
    const {addProducts, products}=useContext(cartContext)
-   const  [itemCart, setitemCart]=useState(
 
-      { 
+   // const  [itemCart, setitemCart]=useState(
+
+   //    { 
+   //        id:data.id,
+   //       name:data.name,
+   //       price:data.price,
+   //       image:data.img,
+   //       quantity:0
+   //    }
+
+   // )
+
+   const  itemCart={
           id:data.id,
          name:data.name,
          price:data.price,
          image:data.img,
-         quantity:0
+         quantity:1,
       }
 
-   )
+  
 
 
-   const onAdd = (value) =>{
+//    const onAdd = (value) =>{
 
-   itemCart.quantity=value
+//    itemCart.quantity=value
 
 
+// }
+
+// const sendItem =()=>{
+
+// addProducts(itemCart, quantity)
+// }
+
+
+const onAdd= (quantity) => {
+   addProducts(itemCart,quantity)
 }
 
-const sendItem =()=>{
-
-addProducts(itemCart)
-}
 
 return (
     
@@ -49,7 +66,7 @@ return (
                 <h2 className="detalleProducto">Stock:{data.stock}</h2>
                 <ItemCount data={data} onAdd={onAdd}/>
                
-                   <button  onClick={sendItem}>Comprar</button>
+                
                
 
               

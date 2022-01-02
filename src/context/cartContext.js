@@ -1,27 +1,4 @@
-// import { createContext, useState } from "react";
 
-// const CartContext = createContext();
-
-// const CartProvider = ({children}) => {
-//     const [products, setProducts] = useState([])
-
-//     const addProducts = (product) => {
-//         setProducts([...products, product])
-//     }
-
-//     const data = {
-//         products,
-//         addProducts
-//     }
-    
-//     return(
-//         <CartContext.Provider value={data} >
-//             {children}
-//         </CartContext.Provider>
-//     )
-// }
-// export { CartProvider }
-// export default CartContext
 
 import {createContext, useState} from 'react';
 
@@ -59,7 +36,16 @@ const [totalPrice, setTotalPrice] = useState(0);
 
 const removeItem = (id) => setProducts(products.filter(product=>product.id !==id)); 
 
-const clearCart = () => setProducts([]) 
+
+const totalFinal =products.reduce(function (acc,curr) {
+    return acc+curr.quantity* curr.price
+},0)
+
+
+
+function clearCart(){
+    setProducts([])
+}
 
     const data= {
     products,
@@ -67,7 +53,8 @@ const clearCart = () => setProducts([])
     totalPrice,
     clearCart,
     removeItem,
-    isInCart
+    isInCart,
+    totalFinal
     }
 
     return (

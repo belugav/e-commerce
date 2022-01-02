@@ -8,10 +8,12 @@ import cartContext from '../../context/cartContext';
 const CartWidget= () => {
 
     const [showCart, setShowCart]=useState (false)
-    const{products,totalPrice,clearCart,removeItem}=useContext(cartContext)
+    const{products,totalPrice,clearCart,removeItem,totalFinal}=useContext(cartContext)
     const openCart =()=>{
         setShowCart (!showCart)
 
+        console.log('product object',products)
+        console.log ('total price', totalPrice)
     }
 
     return (
@@ -48,7 +50,7 @@ const CartWidget= () => {
              <div>
                 <p>Total</p>
                 {/* console.log("el precio total es",{totalPrice}) */}
-                 <span>$ {totalPrice}</span>
+                 <span>$ {totalFinal}</span>
              </div>
 
                     <button onClick={()=>{clearCart()}}> Vaciar Carrito</button>

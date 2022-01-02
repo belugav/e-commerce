@@ -5,21 +5,25 @@ export default function ItemCount({data, onAdd}) {
 
     const [itemCount, setItemCout] = useState(1)
 
-    const updateItem=() => {
-         onAdd(itemCount-1)
-        if ( data.stock>1) {
-            setItemCout(itemCount +1)
-        data.stock--
-        }
-        
-    }
 
-    const removeItem=() => {
-        if (itemCount >1) {
-         setItemCout(itemCount -1)
-         data.stock++
-         }
+    const updateItem=() => {
+    if (itemCount===data.stock){
+        return;
     }
+       setItemCout(itemCount+1)
+       
+   }
+
+
+ 
+   const removeItem=() => {
+    if (itemCount===1){
+        return;
+    }
+       setItemCout(itemCount-1)
+       
+   }
+
 
     return (
         <div className="card-item-product">
@@ -31,7 +35,7 @@ export default function ItemCount({data, onAdd}) {
                            <p>{itemCount}</p>
                            <button className="cantDeItems"  onClick={updateItem} >+</button>
                        </div>
-                 
+                       <button  onClick={()=>onAdd(itemCount)}>Comprar</button>
                    
 
            

@@ -3,7 +3,7 @@ import './CartPage.css'
 import cartContext from '../../context/cartContext'
 
 export default function CartPage() {
-   const {products,totalPrice}= useContext(cartContext)
+   const {products,totalPrice,totalFinal}= useContext(cartContext)
    
    return(
     <>
@@ -25,7 +25,7 @@ export default function CartPage() {
              
            )
      })}
-     <h2>Total:$ {totalPrice}</h2>
+     <h2>Total:$ {totalFinal}</h2>
  </>
   )
 
