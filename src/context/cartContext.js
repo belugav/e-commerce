@@ -26,7 +26,9 @@ const [totalPrice, setTotalPrice] = useState(0);
            setTotalPrice(totalPrice+ product.price * product.quantity)
           
        }else{
-        setProducts([...products,product])
+      
+        setProducts(prev => [...prev, {...product, quantity}]);
+
         setTotalPrice(totalPrice+ product.price * product.quantity)
         
      
