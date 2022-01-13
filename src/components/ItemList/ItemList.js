@@ -17,12 +17,12 @@ const ItemList = ({title}) => {
             async function getViajes(db){
 
                     const ViajesCol = collection(db, 'Viajes');
-                    const citySnapshot = await getDocs(ViajesCol);
-                    const cityList = citySnapshot.docs.map(doc => doc.data());
+                    const ViajesSnapshot = await getDocs(ViajesCol);
+                    const cityList = ViajesSnapshot.docs.map(doc => doc.data());
+                    console.log("ViajesList ", cityList )
                     return cityList;
                   }
 
-            }
 
     useEffect(()=>{
         getViajes(db).then((resultsProducts) =>{
