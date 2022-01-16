@@ -6,27 +6,27 @@ export default function CategoriesList() {
        <h1 className='CategoryTitle'>categorias</h1>
        <div className='categoryContainer'>
 
-       <Link to={`/Category/Usa`}>
+       <Link to={`/category/Usa`}>
        <h2>Estados Unidos</h2>
         </Link>
 
-        <Link to={`/Category/España`}>
+        <Link to={`/category/España`}>
         <h2>España</h2>
        </Link>
 
-       <Link to={`/Category/Italia `}>
+       <Link to={`/category/Italia `}>
        <h2>Italia</h2>
        </Link>
 
-       <Link to={`/Category/Francia `}>
+       <Link to={`/category/Francia `}>
        <h2>Francia</h2>
        </Link>
 
-       <Link to={`/Category/China `}>
+       <Link to={`/category/China `}>
        <h2>China</h2>
        </Link>
 
-       <Link to={`/Category/Australia `}>
+       <Link to={`/category/Australia `}>
        <h2>Australia</h2>
        </Link>
 

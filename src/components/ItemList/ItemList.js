@@ -18,10 +18,14 @@ const ItemList = ({title}) => {
 
                     const ViajesCol = collection(db, 'Viajes');
                     const ViajesSnapshot = await getDocs(ViajesCol);
-                    const cityList = ViajesSnapshot.docs.map(doc => doc.data());
-                    console.log("ViajesList ", cityList )
-                    return cityList;
-                  }
+                    const ViajesList = ViajesSnapshot.docs.map(doc => {
+                        let viaje = doc.data()
+                        viaje.id = doc.id
+                        return viaje
+                    });
+                    return ViajesList;
+                }
+                 
 
 
     useEffect(()=>{
