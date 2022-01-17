@@ -27,11 +27,12 @@ console.log("Parametros de ruta",useParams ())
         viaje.id = docSnap.id
         setProduct(viaje)
         setLoader(false)
+      
+
     } else {
         console.log("esta vacio");
     }
-}
-
+} 
 useEffect(() => {
     getProduct(db)
 }, [id])
