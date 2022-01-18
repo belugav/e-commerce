@@ -1,10 +1,23 @@
-import React, {useContext} from 'react'
+import React, {useContext,useState} from 'react'
 import './CartPage.css'
 import cartContext from '../../context/cartContext'
+import ContactModal from '../../components/ContactModal/ContactModal'
+import { Button } from '@mui/material';
+
 
 export default function CartPage() {
    const {products,totalPrice,totalFinal}= useContext(cartContext)
    
+   const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+
+    const handleClose = () => {
+      setOpen(false);
+    };
+
    return(
     <>
       <h1>Listado de Viajes a comprar</h1>
@@ -26,6 +39,14 @@ export default function CartPage() {
            )
      })}
      <h2>Total:$ {totalFinal}</h2>
+     <Button onClick={handleClickOpen}>COMPLETAR COMPRA</Button>
+     <ContactModal 
+                open={open} 
+                handleClose={handleClose} 
+                products={products} 
+                total={totalPrice}
+            />
+
  </>
   )
 

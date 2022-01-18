@@ -3,6 +3,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import './CartWidget.css'
 import {Link} from 'react-router-dom' 
 import cartContext from '../../context/cartContext';
+import ModalCart from '../ModalCart/ModalCart';
 
 
 const CartWidget= () => {
@@ -21,6 +22,7 @@ const CartWidget= () => {
         <div className="cart-container">
             
             <ShoppingCartIcon onClick={openCart}/>
+            {showCart && <ModalCart products={products} total={totalPrice}/>}
 
 
             {showCart ?
@@ -54,8 +56,8 @@ const CartWidget= () => {
              </div>
 
                     <button onClick={()=>{clearCart()}}> Vaciar Carrito</button>
-                    <Link to='/cart'><button>Finalizar Compra</button></Link>
-
+                   { /*<Link to='/cart'><button>Finalizar Compra</button></Link>*/}
+                   <Link to='/cart'><button>Finalizar Compra</button></Link>
                </> 
             )}
            
