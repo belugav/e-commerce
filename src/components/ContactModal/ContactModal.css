@@ -16,4 +16,16 @@
 
 .form-container button:hover {
     color: black !important;
+
+}
+
+.ordenGenerada{
+    margin-left: 25%;
+    font-size: 1rem;
+
+}
+.imgOrden{
+    margin-left:25%;
+    width:230px;
+    height: 230px;
 }

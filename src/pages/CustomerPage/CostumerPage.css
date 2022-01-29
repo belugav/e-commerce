@@ -1,0 +1,10 @@
+.contenedorFoto{
+    display: flex;
+    justify-content: center;
+}
+.imagenTestimonio{
+    width:300px ;
+    height: auto;
+    padding:5px;
+}
+

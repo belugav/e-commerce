@@ -3,12 +3,10 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
-import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import './ContactModal.css'
 
-//firebase
 import db from '../../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
@@ -50,7 +48,11 @@ export default function ContactModal({open, handleClose, products, total}) {
             open={open} 
             className="modal-contact-data"
         >
-            {orderId != null ? <h2>La orden se genero con exito {orderId}</h2> :
+            {orderId != null ? 
+            <div>
+            <h2 className='ordenGenerada'>La orden se genero con exito {orderId}</h2>
+            <img className='imgOrden' src="assets/compra.png"></img>
+            </div> :
                 <>
                     <DialogTitle>Completa tus datos</DialogTitle>
                         <DialogContent>
