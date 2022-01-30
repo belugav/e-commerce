@@ -1,6 +1,6 @@
 #  E-Commerce de turismo y venta de viajes, Traveller
 
-![image](https://github.com/belugav/e-commerce/tree/master/public/assets/logo.png)
+![image](https://github.com/belugav/e-commerce/blob/master/public/assets/logo.png)
 
 # Instalación
 
@@ -29,4 +29,4 @@ Clonar el repositorio,se debe instalar la aplicacion mediante "npm install react
 
 # Demostración 
 
-![image](https://github.com/belugav/e-commerce/tree/master/public/gitAssets/video.gif)
+![image](https://github.com/belugav/e-commerce/blob/master/public/gitAssets/video.gif)
